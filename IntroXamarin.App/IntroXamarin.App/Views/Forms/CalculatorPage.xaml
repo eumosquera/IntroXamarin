@@ -1,0 +1,254 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IntroXamarin.App.Views.Forms.CalculatorPage"
+             BackgroundColor="Black">
+
+
+    <ContentPage.Content>
+        <StackLayout>
+
+
+            <Grid HorizontalOptions="CenterAndExpand"
+                  VerticalOptions="EndAndExpand">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="310"/>
+                </Grid.ColumnDefinitions>
+
+                <Label x:Name="resultText" FontSize="68"
+                   FontAttributes="Bold"
+                   BackgroundColor="#505258" Text="1+2"
+                   TextColor="White"
+                   HorizontalTextAlignment="End"
+                   VerticalTextAlignment="Center"
+                   
+                   />
+            </Grid>
+
+            <!--#region Para resultados old -->
+            <!--
+            <Grid HorizontalOptions="CenterAndExpand"
+                      VerticalOptions="StartAndExpand"
+                      BackgroundColor="LightGray">
+                
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="320"/>
+                </Grid.ColumnDefinitions>
+
+                <Entry IsEnabled="True" Text=" Formula" Grid.Row="0" 
+                       BackgroundColor="WhiteSmoke"
+                       TextColor="White"
+                       HorizontalTextAlignment="Center"
+                       VerticalTextAlignment="Center"/>
+            
+            </Grid>
+            -->
+            <!--#endregion-->
+            <!--#region Para las teclas -->
+            <Grid HorizontalOptions="CenterAndExpand"
+                      VerticalOptions="EndAndExpand"
+                      BackgroundColor="Black">
+                <Grid.RowDefinitions >
+                    <RowDefinition Height="65" />
+                    <RowDefinition Height="65" />
+                    <RowDefinition Height="65" />
+                    <RowDefinition Height="65" />
+                    <RowDefinition Height="65" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="65"/>
+                    <ColumnDefinition Width="65"/>
+                    <ColumnDefinition Width="65"/>
+                    <ColumnDefinition Width="65"/>
+                </Grid.ColumnDefinitions>
+
+                <!--#region Fila 1 -->
+                <Button Text="AC" 
+                       Grid.Row="0" Grid.Column="0"
+                        BackgroundColor="LightGreen"
+                        TextColor="Black"
+                        CornerRadius="100"
+                       FontSize="30"
+                       FontAttributes="Bold"
+                        Clicked="OnClear"/>
+
+                <Button Text="( )" 
+                       Grid.Row="0" Grid.Column="1"
+                       BackgroundColor="SkyBlue"
+                        TextColor="Black"
+                       CornerRadius="100"
+                       FontSize="30" 
+                        Clicked="OnSelectNumber"/>
+
+                <Button Text="%" 
+                       Grid.Row="0" Grid.Column="2"
+                       BackgroundColor="SkyBlue"
+                       TextColor="Black"
+                        CornerRadius="100"
+                       FontSize="30"
+                        Clicked="OnSelectOperator"/>
+
+                <Button Text="÷" 
+                       Grid.Row="0" Grid.Column="3"
+                       BackgroundColor="SkyBlue"
+                       TextColor="Black"
+                       CornerRadius="100"
+                       FontSize="30"
+                       Clicked="OnSelectOperator"/>
+                <!--#endregion-->
+
+                <!--#region Fila 2 -->
+                <Button Text="7" 
+                       Grid.Row="1" Grid.Column="0"
+                       BackgroundColor="#1c1e23"
+                       TextColor="White"
+                        CornerRadius="100"
+                       FontSize="30"
+                       Clicked="OnSelectNumber"/>
+
+                <Button Text="8" 
+                       Grid.Row="1" Grid.Column="1"
+                       TextColor="White"
+                       BackgroundColor="#1c1e23"
+                        CornerRadius="100"
+                       FontSize="30"
+                        Clicked="OnSelectNumber"/>
+
+                <Button Text="9" 
+                       Grid.Row="1" Grid.Column="2"
+                       BackgroundColor="#1c1e23"
+                       CornerRadius="100"
+                       TextColor="White"
+                       FontSize="30"
+                        Clicked="OnSelectNumber"/>
+
+                <Button Text="x" 
+                       Grid.Row="1" Grid.Column="3"
+                       BackgroundColor="SkyBlue"
+                       CornerRadius="100"
+                        TextColor="Black"
+                       FontSize="20"
+                        Clicked="OnSelectOperator"/>
+                <!--#endregion-->
+
+                <!--#region Fila 3 -->
+                <Button Text="4" 
+                       Grid.Row="2" Grid.Column="0"
+                       BackgroundColor="#1c1e23"
+                       TextColor="White"
+                        CornerRadius="100"
+                       FontSize="30"
+                        Clicked="OnSelectNumber"/>
+
+                <Button Text="5" 
+                       Grid.Row="2" Grid.Column="1"
+                       BackgroundColor="#1c1e23"
+                       TextColor="White"
+                        CornerRadius="100"
+                       FontSize="30"
+                        Clicked="OnSelectNumber"/>
+
+                <Button Text="6" 
+                       Grid.Row="2" Grid.Column="2"
+                       BackgroundColor="#1c1e23"
+                       TextColor="White"
+                        CornerRadius="100"
+                       FontSize="30"
+                        Clicked="OnSelectNumber"/>
+
+                <Button Text="-" 
+                       Grid.Row="2" Grid.Column="3"
+                       BackgroundColor="SkyBlue"
+                       TextColor="Black"
+                        CornerRadius="100"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill"
+                       FontSize="40"
+                        Clicked="OnSelectOperator"/>
+                <!--#endregion-->
+
+                <!--#region Fila 4 -->
+                <Button Text="1" 
+                       Grid.Row="3" Grid.Column="0"
+                       BackgroundColor="#1c1e23"
+                       TextColor="White"
+                        CornerRadius="100"
+                       FontSize="30"
+                        Clicked="OnSelectNumber"/>
+
+                <Button Text="2" 
+                       Grid.Row="3" Grid.Column="1"
+                       BackgroundColor="#1c1e23"
+                       TextColor="White"
+                        CornerRadius="100"
+                       FontSize="30"
+                        Clicked="OnSelectNumber"/>
+
+                <Button Text="3" 
+                       Grid.Row="3" Grid.Column="2"
+                       BackgroundColor="#1c1e23"
+                       TextColor="White"
+                        CornerRadius="100"
+                       FontSize="30"
+                        Clicked="OnSelectNumber"/>
+
+                <Button Text="+" 
+                       Grid.Row="3" Grid.Column="3"
+                       BackgroundColor="SkyBlue"
+                       TextColor="Black"
+                        CornerRadius="100"
+                       FontSize="30"
+                       Clicked="OnSelectOperator"/>
+                <!--#endregion-->
+
+                <!--#region fila 5 -->
+                <Button Text="0" 
+                       Grid.Row="4" Grid.Column="0"
+                       BackgroundColor="#1c1e23"
+                       TextColor="White"
+                       CornerRadius="100"
+                       FontSize="30"
+                       Clicked="OnSelectNumber"/>
+
+                
+                <Button Text="." 
+                       Grid.Row="4" Grid.Column="1"
+                       BackgroundColor="#1c1e23"
+                       TextColor="White"
+                       CornerRadius="100"
+                       FontSize="30"
+                       Clicked="OnSelectNumber"/>
+
+                <Button Text="DEL" 
+                       Grid.Row="4" Grid.Column="2"
+                       BackgroundColor="#1c1e23"
+                       TextColor="White"
+                       CornerRadius="100"
+                       FontSize="20"
+                      Clicked="OnClear"/>
+
+                <Button Text="=" 
+                       Grid.Row="4" Grid.Column="3"
+                       BackgroundColor="#e4f8fc"
+                       TextColor="Black"
+                       CornerRadius="100"
+                       FontSize="30"
+                       Clicked="OnCalculate"/>
+
+                <!--#endregion-->
+
+            </Grid>
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
