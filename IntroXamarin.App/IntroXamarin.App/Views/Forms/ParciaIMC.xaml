@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IntroXamarin.App.Views.Forms.ParciaIMC">
+    <ContentPage.Content>
+        <ScrollView HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center">
+            <StackLayout Margin="20,32"
+                         Spacing="0">
+                <Frame BackgroundColor="Navy" 
+                   CornerRadius="20">
+                    <Label Text="Calcula tu IMC" 
+                       HorizontalTextAlignment="Center"
+                       TextColor="White"
+                       FontSize="Medium"/>
+                </Frame>
+                <Label />
+                <Label Text="Peso (kg)" />
+                <Entry Placeholder="En kilogramos"
+                       x:Name="Peso" 
+                       Keyboard="Numeric"/>
+                
+                <Label Text="Altura (cm)" />
+                <Entry Placeholder="En centimetros" 
+                       x:Name="Altura"
+                       Keyboard="Numeric"
+                       />
+
+                <Label Text="Tu IMC" />
+                <Entry x:Name="ResultadoIMC" 
+                       />
+
+                <Button Text="CALCULAR" 
+                    BackgroundColor="Navy"
+                    TextColor="White"
+                    CornerRadius="20"
+                    x:Name="Calcular"
+                    Clicked="Calcular_IMC"
+                    />
+
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
